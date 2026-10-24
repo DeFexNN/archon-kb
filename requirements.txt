@@ -1,0 +1,7 @@
+# Archon-KB Core Dependencies
+psycopg2-binary>=2.9.9
+fastmcp>=0.1.0
+
+# Optional high-performance embeddings (falls back to built-in semantic hash vectorizer if omitted)
+# fastembed>=0.3.0
+# sentence-transformers>=3.0.0

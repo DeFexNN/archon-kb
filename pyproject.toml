@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "archon-kb"
+version = "1.0.0"
+description = "High-performance Technical Knowledge Base & MCP Server with PostgreSQL 17, pgvector (HNSW), Lexical GIN search, RRF Reranking, and Entity-Graph Extraction."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "DeFexNN" }
+]
+keywords = [
+  "mcp",
+  "mcp-server",
+  "knowledge-base",
+  "pgvector",
+  "hybrid-search",
+  "rag",
+  "graph-rag",
+  "reverse-engineering",
+  "kernel",
+  "fastmcp",
+  "postgresql"
+]
+dependencies = [
+  "psycopg2-binary>=2.9.9",
+  "fastmcp>=0.1.0"
+]
+
+[project.optional-dependencies]
+embeddings = [
+  "fastembed>=0.3.0",
+  "sentence-transformers>=3.0.0"
+]
+dev = [
+  "pytest>=7.0.0"
+]
+
+[project.scripts]
+archon-mcp = "src.mcp_server:mcp.run"

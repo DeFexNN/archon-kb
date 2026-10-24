@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/mcp-config.json",
+  "mcpServers": {
+    "archon-kb": {
+      "command": "python",
+      "args": [
+        "C:\\Archon-KB\\src\\mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:\\Archon-KB",
+        "PGHOST": "localhost",
+        "PGPORT": "5432",
+        "PGDATABASE": "technical_kb",
+        "PGUSER": "postgres",
+        "PGPASSWORD": "your_password_here",
+        "EMBEDDING_MODEL": "local-semantic-384"
+      }
+    }
+  }
+}
